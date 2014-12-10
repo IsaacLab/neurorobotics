@@ -25,7 +25,6 @@ for rep=1:Nrep
             name=['dfa1_',mode1{iM1}]
     end
 
-
     load network
     
     Ntrials=Trials;
@@ -201,7 +200,6 @@ for rep=1:Nrep
     
     figure
     plot(dist')
-    
     
     figure
     plot(xx')
