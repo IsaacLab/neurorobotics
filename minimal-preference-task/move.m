@@ -2,7 +2,7 @@ function [x,y,p,vt]=move(x,y,p,Mi,Mr,R,T)
   
   vt=(Mr+Mi)/2;
   vr=(Mr-Mi)/2/R;
-    
+  
   xant=x;
   yant=y;
   pant=p;
