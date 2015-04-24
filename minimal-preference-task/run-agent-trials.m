@@ -129,11 +129,10 @@ for rep=1:Nrep
             zz=(mod(zz+pi,2*pi)-pi); 
 
             if plasticity == 1
-                K=(1-cos(dK))/2*alpha.*(mod(dK,4*pi)<2*pi);
+                K=(1-cos(dK))/2*alpha.*(mod(dK,4*pi)<2*pi); % Weight mapping function
             else
                 K=Kf;
             end
-            K=(1-cos(dK))/2*alpha.*(mod(dK,4*pi)<2*pi);
                     
             z1 = w + I + diag(K*sin(zz));
 
@@ -144,11 +143,8 @@ for rep=1:Nrep
             p_phi = eps_K.*repmat(homeostatic_regulator((phi(:,i)-phi0),H1,H2),1,Nsize);
             diff_z= zz' - repmat(phi0,1,Nsize);
                     
-            if plasticity == 1
-                dK1 = (p_phi).*(1-cos(diff_z))/2;
-            else
-                dK1 = zeros(Nsize);
-            end
+
+            dK1 = (p_phi).*(1-cos(diff_z))/2;
 
             z(:,i+1) = z(:,i) + z1*T;
             dK = dK + dK1*T;
