@@ -1,2 +1,3 @@
-code
+code for homeostatic neurorobotic agents
 ====
+
