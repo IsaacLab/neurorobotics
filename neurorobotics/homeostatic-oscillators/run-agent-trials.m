@@ -18,7 +18,6 @@ task=0; %task 0 for two ligths
 save_on=0; % save_on=1 for saving results into file
 
 iM1=1
-iM2=1
 for rep=1:Nrep
 
     if noise ==1
