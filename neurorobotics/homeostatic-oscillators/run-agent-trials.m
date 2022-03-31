@@ -199,7 +199,7 @@ for rep=1:Nrep
     
     figure
     plot(xx')
-    save([name,'_',num2str(rep)],'xx,''RT','dist','T')
+    save([name,'_',num2str(rep)],'xx','RT','dist','T')
 
 end
 
