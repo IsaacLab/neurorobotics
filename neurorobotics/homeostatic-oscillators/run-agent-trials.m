@@ -47,7 +47,7 @@ for rep=1:Nrep
             
     if plasticity==0
        refK=randi(100,1,1);
-       load(['record_1/record_trial_',num2str(refK)],'K') % Values previously generated for a plastic robot 
+       load(['record/record_trial_',num2str(refK)],'K') % Values previously generated for a plastic robot 
        Kf=K(:,:,N/2);
     end
 
@@ -189,7 +189,7 @@ for rep=1:Nrep
             xx=[xx,cos(z)];
       
            if save_on ==1
-                savefile=['record_trial_',num2str(trial),'.mat'];
+                savefile=['record/record_trial_',num2str(trial),'.mat'];
             save(savefile);
         end
     end
